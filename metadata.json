@@ -1,0 +1,6 @@
+{
+  "name": "Jiyama Tradelinks",
+  "description": "High-purity chemical intermediates, precious metal catalysts, and specialty chemicals supplier. Custom chemical sourcing solutions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
