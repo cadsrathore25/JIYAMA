@@ -22,7 +22,7 @@ export default function Navbar({
         {/* Logo */}
         <div 
           id="brand-logo" 
-          onClick={() => onNavigate('about')} 
+          onClick={() => onNavigate('home')} 
           className="flex cursor-pointer items-center space-x-3 transition hover:opacity-90"
         >
           <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-sky-600 text-slate-950 shadow-md">
@@ -41,25 +41,32 @@ export default function Navbar({
         {/* Navigation - Desktop */}
         <nav className="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-400">
           <button
+            id="nav-home"
+            onClick={() => onNavigate('home')}
+            className={`transition hover:text-sky-400 ${activeSection === 'home' ? 'text-sky-400 font-semibold border-b-2 border-sky-400 pb-1' : ''}`}
+          >
+            Home Page
+          </button>
+          <button
             id="nav-catalog"
             onClick={() => onNavigate('catalog')}
             className={`transition hover:text-sky-400 ${activeSection === 'catalog' ? 'text-sky-400 font-semibold border-b-2 border-sky-400 pb-1' : ''}`}
           >
-            Catalog & Services
+            Chemical Catalog
+          </button>
+          <button
+            id="nav-services"
+            onClick={() => onNavigate('services')}
+            className={`transition hover:text-sky-400 ${activeSection === 'services' ? 'text-sky-400 font-semibold border-b-2 border-sky-400 pb-1' : ''}`}
+          >
+            Scientific Services
           </button>
           <button
             id="nav-sourcing"
             onClick={() => onNavigate('sourcing')}
             className={`transition hover:text-sky-400 ${activeSection === 'sourcing' ? 'text-sky-400 font-semibold border-b-2 border-sky-400 pb-1' : ''}`}
           >
-            Custom Sourcing
-          </button>
-          <button
-            id="nav-about"
-            onClick={() => onNavigate('about')}
-            className={`transition hover:text-sky-400 ${activeSection === 'about' ? 'text-sky-400 font-semibold border-b-2 border-sky-400 pb-1' : ''}`}
-          >
-            Home Page
+            Sourcing & Services Request
           </button>
         </nav>
 

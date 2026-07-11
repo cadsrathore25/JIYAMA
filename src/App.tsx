@@ -11,7 +11,7 @@ import { Product, EnquiryItem } from './types';
 import { Beaker, MapPin, Sparkles, Phone, Award, Clock, ArrowRight, ShieldCheck } from 'lucide-react';
 
 export default function App() {
-  const [activeSection, setActiveSection] = useState<string>('about');
+  const [activeSection, setActiveSection] = useState<string>('home');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [enquiryItems, setEnquiryItems] = useState<EnquiryItem[]>([]);
   const [isCartOpen, setIsCartOpen] = useState<boolean>(false);
@@ -145,8 +145,14 @@ export default function App() {
         {activeSection === 'home' && (
           <div className="space-y-16">
             <Hero
-              onSearch={(query) => setSearchQuery(query)}
-              onNavigate={(section) => setActiveSection(section)}
+              onSearch={(query) => {
+                setActiveSection('catalog');
+                setSearchQuery(query);
+              }}
+              onNavigate={(section) => {
+                setActiveSection(section);
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
               onOpenAssistant={() => handleOpenAssistant()}
             />
 
@@ -203,7 +209,10 @@ export default function App() {
 
               <div className="mt-8 text-center">
                 <button
-                  onClick={() => setActiveSection('catalog')}
+                  onClick={() => {
+                    setActiveSection('catalog');
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}
                   className="rounded-xl border border-sky-900 bg-slate-900/40 hover:bg-sky-950/60 text-sky-400 px-6 py-3 text-xs font-semibold transition shadow-sm"
                 >
                   View All Catalysts & Compounds
@@ -230,7 +239,10 @@ export default function App() {
                   </p>
                   <div className="mt-8 flex flex-wrap gap-4">
                     <button
-                      onClick={() => setActiveSection('sourcing')}
+                      onClick={() => {
+                        setActiveSection('sourcing');
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                      }}
                       className="rounded-xl bg-sky-600 hover:bg-sky-500 text-white px-5 py-2.5 text-xs font-bold transition shadow-sm"
                     >
                       Fill Sourcing Request Sheet
@@ -278,12 +290,17 @@ export default function App() {
                 </p>
               </div>
             </section>
+
+            {/* About and Contact company background, photos and maps */}
+            <AboutContact />
           </div>
         )}
 
-        {activeSection === 'catalog' && (
+        {(activeSection === 'catalog' || activeSection === 'services') && (
           <CatalogSection
+            key={activeSection}
             products={products}
+            initialSegment={activeSection === 'services' ? 'services' : 'products'}
             searchQuery={searchQuery}
             onSearchQueryChange={(query) => setSearchQuery(query)}
             onAddToEnquiry={handleAddToEnquiry}
@@ -296,10 +313,6 @@ export default function App() {
           <CustomSourcingForm
             onOpenAssistant={(msg) => handleOpenAssistant(msg)}
           />
-        )}
-
-        {activeSection === 'about' && (
-          <AboutContact />
         )}
       </main>
 
@@ -320,18 +333,23 @@ export default function App() {
               <span className="text-xs font-bold text-slate-200 uppercase tracking-widest block">Quick Links</span>
               <ul className="space-y-2 text-xs">
                 <li>
+                  <button onClick={() => { setActiveSection('home'); window.scrollTo(0,0); }} className="hover:text-sky-400 transition">
+                    Home Page & Guarantee
+                  </button>
+                </li>
+                <li>
                   <button onClick={() => { setActiveSection('catalog'); window.scrollTo(0,0); }} className="hover:text-sky-400 transition">
-                    Catalyst Catalog
+                    Chemical Catalog
+                  </button>
+                </li>
+                <li>
+                  <button onClick={() => { setActiveSection('services'); window.scrollTo(0,0); }} className="hover:text-sky-400 transition">
+                    Scientific Services
                   </button>
                 </li>
                 <li>
                   <button onClick={() => { setActiveSection('sourcing'); window.scrollTo(0,0); }} className="hover:text-sky-400 transition">
-                    Custom Sourcing Form
-                  </button>
-                </li>
-                <li>
-                  <button onClick={() => { setActiveSection('about'); window.scrollTo(0,0); }} className="hover:text-sky-400 transition">
-                    Home Page & Contact
+                    Sourcing & Services Request
                   </button>
                 </li>
               </ul>

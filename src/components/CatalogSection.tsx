@@ -9,6 +9,8 @@ interface CatalogSectionProps {
   onAddToEnquiry: (product: Product, quantity?: string) => void;
   enquiryItems: { product: Product; quantity?: string }[];
   onOpenAssistant: (initialMessage?: string) => void;
+  initialSegment?: 'products' | 'services';
+  key?: string;
 }
 
 export default function CatalogSection({
@@ -18,8 +20,9 @@ export default function CatalogSection({
   onAddToEnquiry,
   enquiryItems,
   onOpenAssistant,
+  initialSegment = 'products',
 }: CatalogSectionProps) {
-  const [activeSegment, setActiveSegment] = useState<'products' | 'services'>('products');
+  const [activeSegment, setActiveSegment] = useState<'products' | 'services'>(initialSegment);
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [selectedSubcategory, setSelectedSubcategory] = useState<string>('All');
   const [showOnlyWithCAS, setShowOnlyWithCAS] = useState(false);
