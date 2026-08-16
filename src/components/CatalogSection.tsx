@@ -131,7 +131,7 @@ export default function CatalogSection({
 
   const handleConsultAI = (product: Product) => {
     onOpenAssistant(
-      `Hello! I'm interested in Jiyama Tradelinks' product: ${product.name} ${product.casNo ? `(CAS: ${product.casNo})` : ''}. Can you provide detailed tech specs, reaction compatibility, and packaging parameters?`
+      `Hello! I'm interested in Jiyama Finechem LLP's product: ${product.name} ${product.casNo ? `(CAS: ${product.casNo})` : ''}. Can you provide detailed tech specs, reaction compatibility, and packaging parameters?`
     );
   };
 
@@ -486,7 +486,7 @@ export default function CatalogSection({
                   <span className="text-[10px] font-mono text-slate-500">Certified Compliance guaranteed</span>
                   <div className="flex items-center space-x-2">
                     <button
-                      onClick={() => onOpenAssistant(`Can you tell me more about Jiyama Tradelinks' service: ${srv.title}? I would like to discuss a potential project/timeline.`)}
+                      onClick={() => onOpenAssistant(`Can you tell me more about Jiyama Finechem LLP's service: ${srv.title}? I would like to discuss a potential project/timeline.`)}
                       className="rounded-lg border border-slate-700 hover:bg-slate-800 text-[11px] font-semibold text-slate-300 py-2 px-3 transition"
                     >
                       Consult AI

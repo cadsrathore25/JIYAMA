@@ -45,7 +45,7 @@ export default function CustomSourcingForm({ onOpenAssistant }: CustomSourcingFo
         </h2>
         <p className="mt-3 text-sm text-slate-400">
           Can't find a rare catalyst, chiral intermediate, or specialized active ingredient? 
-          Jiyama Tradelinks' veteran procurement experts can source, import, and test custom chemicals worldwide.
+          Jiyama Finechem LLP's veteran procurement experts can source, import, and test custom chemicals worldwide.
         </p>
       </div>
 

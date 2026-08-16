@@ -67,7 +67,7 @@ export default function AboutContact() {
       <div className="space-y-6">
         <div className="text-center">
           <h3 className="font-display text-xs font-bold uppercase tracking-wider text-slate-400">
-            Why Laboratories & Industries Standardize on Jiyama Tradelinks
+            Why Laboratories & Industries Standardize on Jiyama Finechem LLP
           </h3>
         </div>
 
@@ -245,11 +245,11 @@ export default function AboutContact() {
           </div>
           
           <h2 className="font-display text-3xl font-extrabold text-white">
-            About <span className="font-serif italic text-sky-200">Jiyama</span> Tradelinks
+            About <span className="font-serif italic text-sky-200">Jiyama</span> Finechem LLP
           </h2>
           
           <p className="text-sm text-slate-300 leading-relaxed">
-            Jiyama Tradelinks was founded by a <strong>Chemical Industry Veteran</strong> and seasoned procurement experts with <strong>over 20 years of active, hands-on experience</strong> in catalytic synthesis, global supply logistics, and regulatory compliance. 
+            Jiyama Finechem LLP was founded by a <strong>Chemical Industry Veteran</strong> and seasoned procurement experts with <strong>over 20 years of active, hands-on experience</strong> in catalytic synthesis, global supply logistics, and regulatory compliance. 
           </p>
           <p className="text-sm text-slate-300 leading-relaxed">
             Based in the historical industrial hub of <strong>Udaipur, Rajasthan</strong>, we specialize in bridging the gap between state-of-the-art chemical researchers and heavy multi-ton scale industrial manufacturers. Our core competency lies in supplying high-purity industrial grade catalysts, precious metal compounds (Palladium, Platinum, Ruthenium, Rhodium, Silver), Raney Nickel catalysts, active pharmaceutical ingredient (API) intermediates, and bespoke customized sourcing.
@@ -422,7 +422,7 @@ export default function AboutContact() {
             </p>
 
             <div className="mt-4 p-4 rounded-xl bg-slate-950 border border-slate-850 font-display font-medium text-xs text-slate-300">
-              <strong>Jiyama Tradelinks Corporate Address:</strong> <br />
+              <strong>Jiyama Finechem LLP Corporate Address:</strong> <br />
               Udaipur, Rajasthan, <br />
               India - 313001
             </div>

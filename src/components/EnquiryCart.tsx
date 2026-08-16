@@ -41,7 +41,7 @@ export default function EnquiryCart({
     });
 
     let doc = `====================================================
-           JIYAMA TRADELINKS - OFFICIAL QUOTE REQUEST
+           JIYAMA FINECHEM LLP - OFFICIAL QUOTE REQUEST
 ====================================================
 Date: ${currentDate}
 Location of Supplier: Udaipur, Rajasthan, India
@@ -71,7 +71,7 @@ INQUIRY PRODUCT LIST:
 ----------------------------------------------------\n`;
     });
 
-    doc += `\nThank you for choosing Jiyama Tradelinks. Our procurement veterans (with 20+ years of chemical supply expertise) will revert with structural compatibility analysis, formal proforma invoice, price index, and shipping timelines.`;
+    doc += `\nThank you for choosing Jiyama Finechem LLP. Our procurement veterans (with 20+ years of chemical supply expertise) will revert with structural compatibility analysis, formal proforma invoice, price index, and shipping timelines.`;
     return doc;
   };
 
@@ -285,7 +285,7 @@ INQUIRY PRODUCT LIST:
               Inquiry Generated Successfully!
             </h3>
             <p className="mt-2 text-xs text-slate-300 max-w-xl mx-auto">
-              Your Request for Quote has been formatted. Jiyama Tradelinks' senior veterans (+20 years of procurement and catalytic engineering expertise) are reviewing your synthetic guidelines.
+              Your Request for Quote has been formatted. Jiyama Finechem LLP's senior veterans (+20 years of procurement and catalytic engineering expertise) are reviewing your synthetic guidelines.
             </p>
           </div>
 
@@ -331,7 +331,7 @@ INQUIRY PRODUCT LIST:
             <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
               <a
                 href={`https://wa.me/918918588147?text=${encodeURIComponent(
-                  `Hello Jiyama Tradelinks! I would like to request a quote for high-purity chemical intermediates. Here are my requirements: \n\n${items.map(it => `• ${it.product.name} (Qty: ${it.quantity})`).join('\n')}`
+                  `Hello Jiyama Finechem LLP! I would like to request a quote for high-purity chemical intermediates. Here are my requirements: \n\n${items.map(it => `• ${it.product.name} (Qty: ${it.quantity})`).join('\n')}`
                 )}`}
                 target="_blank"
                 rel="noreferrer"

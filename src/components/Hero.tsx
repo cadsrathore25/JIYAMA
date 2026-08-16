@@ -44,7 +44,7 @@ export default function Hero({ onSearch, onNavigate, onOpenAssistant }: HeroProp
 
           {/* Subtext */}
           <p className="mx-auto mt-6 max-w-3xl text-base text-slate-400 sm:text-lg">
-            Jiyama Tradelinks is Udaipur's premier supplier of high-purity precious metal catalysts, 
+            Jiyama Finechem LLP is Udaipur's premier supplier of high-purity precious metal catalysts, 
             active pharmaceutical ingredients (APIs), and specialty compounds. We cater to global researchers 
             and heavy chemical industries with uncompromising purity and speed.
           </p>

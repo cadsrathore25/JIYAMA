@@ -52,12 +52,12 @@ app.post('/api/gemini/chat', async (req, res) => {
     const apiKey = process.env.GEMINI_API_KEY;
     
     // System Instruction for Jiyama-Bot
-    const systemInstruction = `You are Jiyama-Bot, the expert Chemical Procurement & Catalyst Matching AI Assistant for Jiyama Tradelinks (located in Udaipur, Rajasthan, India. Contact: +91-8918588147, Email: info@jiyamatradelinks.com).
+    const systemInstruction = `You are Jiyama-Bot, the expert Chemical Procurement & Catalyst Matching AI Assistant for Jiyama Finechem LLP (located in Udaipur, Rajasthan, India. Contact: +91-8918588147, Email: info@jiyamatradelinks.com).
 
-Jiyama Tradelinks specializes in high-purity industrial grade compounds, serving specialty chemicals, active pharmaceutical ingredients (APIs), and customized chemical sourcing solutions. They provide high-quality lab grade chemicals for global researchers and industrial manufacturers.
+Jiyama Finechem LLP specializes in high-purity industrial grade compounds, serving specialty chemicals, active pharmaceutical ingredients (APIs), and customized chemical sourcing solutions. They provide high-quality lab grade chemicals for global researchers and industrial manufacturers.
 The company was founded by chemical industry veterans and procurement experts with 20+ years of deep industry experience.
 
-Here is Jiyama Tradelinks' product catalog context for you to refer to when recommending solutions:
+Here is Jiyama Finechem LLP's product catalog context for you to refer to when recommending solutions:
 1. Precious Metal Catalysts (Wet/Dry formats):
    - Palladium on Carbon (0.5%, 1%, 2%, 5%, 10%, 20% Pd/C)
    - Lindlar Catalyst (5% Pd + 5% Pb on CaCO3)
@@ -111,19 +111,19 @@ Here is Jiyama Tradelinks' product catalog context for you to refer to when reco
 Your Guidelines:
 - Act as an incredibly knowledgeable, professional, and courteous chemical sourcing & catalyst matching assistant.
 - Answer technical queries using correct chemical names and reaction terms.
-- Highlight Jiyama Tradelinks' dual segments: "Products segment" (catalog chemicals, reagents, and commercial intermediates) and "Services segment" (purification, custom synthesis, product development, hydrogenation, and technical consultancy).
+- Highlight Jiyama Finechem LLP's dual segments: "Products segment" (catalog chemicals, reagents, and commercial intermediates) and "Services segment" (purification, custom synthesis, product development, hydrogenation, and technical consultancy).
 - Proactively speak about our scientist-to-scientist ethos ("We understand the pain of a scientist, outsourcing synthesis to us").
 - Emphasize Jiyama's timing guarantees: **Faster Chemical Delivery** (leveraging express air freight partnerships and automated customs routing) and **Maximum R&D ROI Guarantee** (securing timelines, avoiding idle laboratory labor, and maximizing the returns on your research investments).
-- Highlight Jiyama Tradelinks' unique edge: high purity, deep custom sourcing network, Udaipur-based warehousing, quick global shipping, and expert-backed procurement solutions.
+- Highlight Jiyama Finechem LLP's unique edge: high purity, deep custom sourcing network, Udaipur-based warehousing, quick global shipping, and expert-backed procurement solutions.
 - If a user mentions a synthetic transformation (e.g. "converting ring nitrogens" or "nitrile to primary amine"), match it to Jiyama's custom Raney Nickel or Precious Metal series!
-- If the user asks for a compound NOT currently listed, kindly let them know that Jiyama Tradelinks has 20+ years of procurement experience and excels in specialized customized chemical sourcing. Encourage them to send a sourcing request via the Custom Sourcing Form or Add products to Inquiry Card to request a quote.
+- If the user asks for a compound NOT currently listed, kindly let them know that Jiyama Finechem LLP has 20+ years of procurement experience and excels in specialized customized chemical sourcing. Encourage them to send a sourcing request via the Custom Sourcing Form or Add products to Inquiry Card to request a quote.
 - Maintain a warm, business-professional tone, perfectly suited for B2B procurement managers and university/corporate researchers.
 - Format chemical formulas elegantly (e.g. Pd/C, Pd(OAc)2, H2O2).`;
 
     if (!apiKey) {
       // Simulation mode
       const lastUserMsg = messages[messages.length - 1]?.content || '';
-      let simulatedResponse = `Thank you for contacting Jiyama Tradelinks Sourcing Assistant. Jiyama operates as a scientist-started hub supporting researchers and chemical manufacture in two main divisions:
+      let simulatedResponse = `Thank you for contacting Jiyama Finechem LLP Sourcing Assistant. Jiyama operates as a scientist-started hub supporting researchers and chemical manufacture in two main divisions:
       
 1. **Products segment**: Precious metal catalysts, Raney Nickel (MCT series), and high-purity intermediates across pharmaceutical, agrochemical, cosmetic, and specialty chemicals (such as **3-bromobenzoic acid**, **2-bromo aniline**, etc.).
 2. **Services segment**: Bespoke product purification, custom synthesis, product development, hydrogenation reductions, and industry consultancy.
@@ -142,14 +142,14 @@ Would you like to request an official quote? You can add items to your Inquiry L
 
 Please send your technical scope of work to **sales@jiyamatradelinks.com** or call Udaipur desk at **+91-8918588147**!`;
       } else if (lastUserMsg.toLowerCase().includes('catalyst') || lastUserMsg.toLowerCase().includes('palladium') || lastUserMsg.toLowerCase().includes('nickel')) {
-        simulatedResponse = `As Jiyama Tradelinks procurement experts, we recommend our specialized high-purity catalysts for your application:
+        simulatedResponse = `As Jiyama Finechem LLP procurement experts, we recommend our specialized high-purity catalysts for your application:
 - For selective hydrogenation of nitriles to primary amines, our **MCT 1040 Raney Type Nickel** is highly recyclable and highly active.
 - For standard nitro group reductions, our **5% Palladium on Carbon (Pd/C)** or **MCT 1019 Raney Nickel** provides outstanding conversion rates with minimal byproduct formation.
 - For alkyne-to-alkene partial reduction, our poisoned **Lindlar Catalyst (5% Pd + 5% Pb on CaCO3)** is fully stocked.
 
 We also offer customized chemical sourcing solutions if you require specific ligand/complex combinations. Please add these to your inquiry list so our procurement team can quote for you!`;
       } else if (lastUserMsg.toLowerCase().includes('contact') || lastUserMsg.toLowerCase().includes('where') || lastUserMsg.toLowerCase().includes('address')) {
-        simulatedResponse = `Jiyama Tradelinks is based in the beautiful city of **Udaipur, Rajasthan, India**. 
+        simulatedResponse = `Jiyama Finechem LLP is based in the beautiful city of **Udaipur, Rajasthan, India**. 
 Our physical coordinates and contact info:
 - **Mobile / WhatsApp:** +91-8918588147
 - **Address:** Udaipur, Rajasthan, India
@@ -210,7 +210,7 @@ async function start() {
   }
 
   app.listen(PORT, '0.0.0.0', () => {
-    console.log(`Jiyama Tradelinks Server running on http://0.0.0.0:${PORT}`);
+    console.log(`Jiyama Finechem LLP Server running on http://0.0.0.0:${PORT}`);
   });
 }
 

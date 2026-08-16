@@ -322,7 +322,7 @@ export default function App() {
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-3 border-b border-slate-800 pb-8">
             <div className="space-y-4">
               <span className="font-display text-lg font-bold tracking-tight text-white block">
-                JIYAMA <span className="text-sky-400">TRADELINKS</span>
+                JIYAMA <span className="text-sky-400">FINECHEM LLP</span>
               </span>
               <p className="text-xs text-slate-400 leading-relaxed max-w-xs">
                 Udaipur, Rajasthan based premium supplier of precious metal catalysts, active ingredients and customized global chemical sourcing.
@@ -369,7 +369,7 @@ export default function App() {
           </div>
 
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-500">
-            <p>© {new Date().getFullYear()} Jiyama Tradelinks. All Rights Reserved. Purity Tested, Compliance Ensured.</p>
+            <p>© {new Date().getFullYear()} Jiyama Finechem LLP. All Rights Reserved. Purity Tested, Compliance Ensured.</p>
             <p className="mt-2 sm:mt-0">Veteran Chemical Procurement Solutions Desk</p>
           </div>
         </div>

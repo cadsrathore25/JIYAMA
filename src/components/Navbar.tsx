@@ -30,7 +30,7 @@ export default function Navbar({
           </div>
           <div>
             <span className="font-display text-xl font-bold tracking-tight text-white sm:text-2xl">
-              JIYAMA <span className="text-sky-400">TRADELINKS</span>
+              JIYAMA <span className="text-sky-400">FINECHEM LLP</span>
             </span>
             <p className="font-sans text-[10px] font-medium tracking-widest text-slate-500 uppercase">
               Catalysts & Specialty Chemicals

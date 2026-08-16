@@ -23,7 +23,7 @@ const SUGGESTED_PROMPTS = [
   },
   {
     label: 'Udaipur Office Coordinate',
-    text: 'Where is Jiyama Tradelinks based? What is the mobile phone number and team background?'
+    text: 'Where is Jiyama Finechem LLP based? What is the mobile phone number and team background?'
   }
 ];
 
@@ -37,7 +37,7 @@ export default function SourcingAssistant({
       role: 'model',
       content: `Hello! I'm **Jiyama-Bot**, your expert Chemical Procurement & Catalyst Matching Assistant. 🧪
 
-Jiyama Tradelinks specializes in high-purity industrial grade catalysts, APIs, and custom sourcing. Our team has **20+ years of procurement expertise**.
+Jiyama Finechem LLP specializes in high-purity industrial grade catalysts, APIs, and custom sourcing. Our team has **20+ years of procurement expertise**.
 
 How can I assist you with your research or wholesale chemical sourcing requirements today?`,
       timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
